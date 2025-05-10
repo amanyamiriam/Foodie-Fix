@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Fix - Food Delivery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Foodie Fix</div>
+            <div class="nav-links">
+                <a href="#restaurants">Restaurants</a>
+                <a href="#cuisine">Cuisines</a>
+                <div class="auth-links" id="authLinks">
+                    <a href="#" id="loginBtn">Login</a>
+                    <a href="#" id="registerBtn">Register</a>
+                </div>
+                <div class="user-menu hidden" id="userMenu">
+                    <a href="#profile">Profile</a>
+                    <a href="#orders">My Orders</a>
+                    <a href="#cart" id="cartBtn">Cart (<span id="cartCount">0</span>)</a>
+                    <a href="#reviews">My Reviews</a>
+                    <a href="#" id="logoutBtn">Logout</a>
+                </div>
+                <div class="restaurant-menu hidden" id="restaurantMenu">
+                    <a href="#dashboard">Dashboard</a>
+                    <a href="#menu-management">Menu Management</a>
+                    <a href="#orders-management">Orders</a>
+                    <a href="#analytics">Analytics</a>
+                    <a href="#" id="logoutBtn">Logout</a>
+                </div>
+                <div class="delivery-menu hidden" id="deliveryMenu">
+                    <a href="#active-orders">Active Orders</a>
+                    <a href="#earnings">Earnings</a>
+                    <a href="#delivery-history">History</a>
+                    <a href="#" id="logoutBtn">Logout</a>
+                </div>
+                <div class="admin-menu hidden" id="adminMenu">
+                    <a href="#users">Users</a>
+                    <a href="#restaurants-admin">Restaurants</a>
+                    <a href="#orders-admin">Orders</a>
+                    <a href="#promotions">Promotions</a>
+                    <a href="#" id="logoutBtn">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Auth Modals -->
+    <div id="loginModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <select name="userType" required>
+                    <option value="customer">Customer</option>
+                    <option value="restaurant">Restaurant</option>
+                    <option value="delivery">Delivery Partner</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="registerModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <select name="userType" required>
+                    <option value="customer">Customer</option>
+                    <option value="restaurant">Restaurant</option>
+                    <option value="delivery">Delivery Partner</option>
+                </select>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="text" placeholder="Address" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Customer Dashboard -->
+    <main id="customerDashboard">
+        <section class="search-section">
+            <input type="text" placeholder="Search for restaurants or dishes">
+            <button>Search</button>
+        </section>
+
+        <section class="restaurants-grid" id="restaurants">
+            <!-- Restaurant cards will be dynamically loaded here -->
+        </section>
+
+        <section id="orderTracking" class="hidden">
+            <h2>Track Your Order</h2>
+            <div class="tracking-map" id="map"></div>
+            <div class="order-status"></div>
+        </section>
+    </main>
+
+    <!-- Restaurant Dashboard -->
+    <main id="restaurantDashboard" class="hidden">
+        <section class="menu-management">
+            <h2>Menu Management</h2>
+            <div id="menuItems"></div>
+            <button id="addMenuItem">Add New Item</button>
+        </section>
+
+        <section class="order-management">
+            <h2>Active Orders</h2>
+            <div id="activeOrders"></div>
+        </section>
+
+        <section class="analytics">
+            <h2>Analytics</h2>
+            <div id="salesChart"></div>
+            <div id="orderStats"></div>
+        </section>
+    </main>
+
+    <!-- Delivery Partner Dashboard -->
+    <main id="deliveryDashboard" class="hidden">
+        <section class="active-deliveries">
+            <h2>Active Deliveries</h2>
+            <div id="deliveryMap"></div>
+            <div id="deliveryList"></div>
+        </section>
+
+        <section class="earnings">
+            <h2>Earnings</h2>
+            <div id="earningsStats"></div>
+        </section>
+    </main>
+
+    <!-- Admin Dashboard -->
+    <main id="adminDashboard" class="hidden">
+        <section class="user-management">
+            <h2>User Management</h2>
+            <div id="usersList"></div>
+        </section>
+
+        <section class="promotion-management">
+            <h2>Promotions</h2>
+            <div id="promotionsList"></div>
+            <button id="addPromotion">Add New Promotion</button>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="sidebar hidden">
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <div class="cart-total">
+            <span>Total: $<span id="cartTotal">0.00</span></span>
+            <button id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Foodie Fix. All rights reserved.</p>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/restaurant.js"></script>
+    <script src="js/delivery.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
