@@ -1,0 +1,112 @@
+.delivery-portal {
+    background: linear-gradient(135deg, #2F3542 0%, #57606f 100%);
+    color: white;
+}
+
+.delivery-auth-page {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.delivery-auth-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    color: #2d3436;
+}
+
+.delivery-auth-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #2d3436;
+}
+
+.delivery-auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.delivery-auth-form input {
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.delivery-auth-form input:focus {
+    border-color: #FF4757;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.1);
+}
+
+.delivery-auth-form button {
+    background: #FF4757;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delivery-auth-form button:hover {
+    background: #ff3344;
+    transform: translateY(-2px);
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.auth-link a {
+    color: #FF4757;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Add to existing delivery-portal.css */
+
+.document-upload {
+    margin: 1rem 0;
+}
+
+.document-upload label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2d3436;
+    font-weight: 500;
+}
+
+.document-upload input[type="file"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px dashed #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.document-upload input[type="file"]:hover {
+    border-color: #FF4757;
+}
+
+.delivery-auth-form textarea {
+    min-height: 100px;
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    resize: vertical;
+}

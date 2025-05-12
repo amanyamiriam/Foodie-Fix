@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Partner Registration - Foodie Fix</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/delivery-portal.css">
+</head>
+<body class="delivery-portal">
+    <header>
+        <nav class="navbar">
+            <img src="../images/logo.jpg" alt="Logo">
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="login.html">Partner Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="delivery-auth-page">
+        <div class="delivery-auth-container">
+            <h1>Become a Delivery Partner</h1>
+            <form class="delivery-auth-form" id="deliveryRegisterForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="text" placeholder="Vehicle Type" required>
+                <input type="text" placeholder="Vehicle Number" required>
+                <input type="text" placeholder="License Number" required>
+                <input type="password" placeholder="Create Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <div class="document-upload">
+                    <label>Upload Documents:</label>
+                    <input type="file" accept=".pdf,.jpg,.png" multiple required>
+                </div>
+                <button type="submit">Register as Partner</button>
+                <p class="auth-link">Already a partner? <a href="login.html">Login here</a></p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Foodie Fix. All rights reserved.</p>
+    </footer>
+</body>
+</html>

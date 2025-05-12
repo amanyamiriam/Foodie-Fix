@@ -1,0 +1,275 @@
+.admin-portal {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
+    color: white;
+}
+
+.admin-auth-page {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.admin-auth-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.admin-auth-container h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.admin-auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.admin-auth-form input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.admin-auth-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.admin-auth-form button {
+    background: #FF4757;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.admin-auth-form button:hover {
+    background: #ff3344;
+}
+
+.two-factor {
+    margin-top: 1rem;
+}
+
+/* Admin Dashboard Styles */
+.admin-dashboard {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.admin-dashboard section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.admin-dashboard h2 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+}
+
+/* User Management */
+.user-management {
+    min-height: 400px;
+}
+
+.user-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-2px);
+}
+
+.user-card h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.user-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.user-card button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #FF4757;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.user-card button:hover {
+    background: #ff3344;
+}
+
+/* Promotion Management */
+.promotion-management {
+    min-height: 400px;
+}
+
+#addPromotion {
+    background: #FF4757;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+#addPromotion:hover {
+    background: #ff3344;
+    transform: translateY(-2px);
+}
+
+.promotion-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.promotion-card h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.promotion-card .details {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.promotion-card .actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.promotion-card .actions button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.promotion-card .edit {
+    background: #4a90e2;
+    color: white;
+}
+
+.promotion-card .delete {
+    background: #FF4757;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-dashboard {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .admin-dashboard section {
+        padding: 1rem;
+    }
+}
+
+/* Loading States */
+.loading {
+    position: relative;
+    opacity: 0.7;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Status Indicators */
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status-active {
+    background: #2ed573;
+    color: white;
+}
+
+.status-inactive {
+    background: #ff4757;
+    color: white;
+}
+
+/* Search and Filter */
+.admin-controls {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.search-input {
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 200px;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}

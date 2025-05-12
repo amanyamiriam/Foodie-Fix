@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants - Foodie Fix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/restaurants.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="images/logo.jpg" alt="Logo">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="restaurants.html" class="active">Restaurants</a>
+                <a href="cuisines.html">Cuisines</a>
+                <div class="auth-links" id="authLinks">
+                    <a href="login.html" id="loginBtn">Login</a>
+                    <a href="register.html" id="registerBtn">Register</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="restaurants-page">
+        <div class="filters-section">
+            <h2>Filters</h2>
+            <div class="filter-group">
+                <h3>Cuisine Type</h3>
+                <label><input type="checkbox" value="italian"> Italian</label>
+                <label><input type="checkbox" value="chinese"> Chinese</label>
+                <label><input type="checkbox" value="indian"> Indian</label>
+                <label><input type="checkbox" value="mexican"> Mexican</label>
+            </div>
+            <div class="filter-group">
+                <h3>Price Range</h3>
+                <label><input type="checkbox" value="$"> $</label>
+                <label><input type="checkbox" value="$$"> $$</label>
+                <label><input type="checkbox" value="$$$"> $$$</label>
+            </div>
+            <div class="filter-group">
+                <h3>Rating</h3>
+                <label><input type="checkbox" value="4.5"> 4.5+ ★</label>
+                <label><input type="checkbox" value="4.0"> 4.0+ ★</label>
+                <label><input type="checkbox" value="3.5"> 3.5+ ★</label>
+            </div>
+        </div>
+
+        <div class="restaurants-container" id="restaurantsList">
+            <!-- Restaurants will be dynamically loaded here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Foodie Fix. All rights reserved.</p>
+    </footer>
+
+    <script src="js/restaurants.js"></script>
+</body>
+</html>

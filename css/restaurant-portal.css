@@ -1,0 +1,132 @@
+.restaurant-portal {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.restaurant-auth-page {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.restaurant-auth-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-auth-container h1 {
+    color: #2d3436;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.restaurant-auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.restaurant-auth-form input {
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.restaurant-auth-form input:focus {
+    border-color: #FF4757;
+    outline: none;
+}
+
+.restaurant-auth-form button {
+    background: #FF4757;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.restaurant-auth-form button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Add to existing restaurant-portal.css */
+
+.time-slots {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.time-slots label {
+    grid-column: 1 / -1;
+    color: #2d3436;
+    font-weight: 500;
+}
+
+.restaurant-auth-form select {
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.restaurant-auth-form select:focus {
+    border-color: #FF4757;
+    outline: none;
+}
+
+.restaurant-auth-form textarea {
+    min-height: 100px;
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    resize: vertical;
+}
+
+.document-upload {
+    margin: 1rem 0;
+}
+
+.document-upload label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2d3436;
+    font-weight: 500;
+}
+
+.document-upload input[type="file"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px dashed #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.document-upload input[type="file"]:hover {
+    border-color: #FF4757;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .time-slots {
+        grid-template-columns: 1fr;
+    }
+    
+    .restaurant-auth-container,
+    .delivery-auth-container {
+        padding: 1.5rem;
+    }
+}

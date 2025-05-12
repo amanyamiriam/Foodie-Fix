@@ -10,13 +10,14 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">Foodie Fix</div>
+            <img src="images/logo.jpg" alt="Logo">
             <div class="nav-links">
-                <a href="#restaurants">Restaurants</a>
-                <a href="#cuisine">Cuisines</a>
+                <a href="index.html">Home</a>
+                <a href="restaurants.html">Restaurants</a>
+                <a href="cuisines.html">Cuisines</a>
                 <div class="auth-links" id="authLinks">
-                    <a href="#" id="loginBtn">Login</a>
-                    <a href="#" id="registerBtn">Register</a>
+                    <a href="login.html" id="loginBtn">Login</a>
+                    <a href="register.html" id="registerBtn">Register</a>
                 </div>
                 <div class="user-menu hidden" id="userMenu">
                     <a href="#profile">Profile</a>
@@ -173,5 +174,23 @@
     <script src="js/restaurant.js"></script>
     <script src="js/delivery.js"></script>
     <script src="js/admin.js"></script>
+
+    <!-- Add these before the closing body tag -->
+    <link rel="stylesheet" href="css/feedback.css">
+    <script src="js/feedback.js"></script>
+    <div id="chatbot" class="chatbot-container hidden">
+        <div class="chatbot-header">
+            <h3>Customer Support</h3>
+            <button id="closeChatbot">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages"></div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Type your message...">
+            <button id="sendMessage">Send</button>
+        </div>
+    </div>
+
+    <!-- Add this to your script imports -->
+    <script src="js/ai-services.js"></script>
 </body>
 </html>

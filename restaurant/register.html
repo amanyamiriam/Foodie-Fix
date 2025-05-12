@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Registration - Foodie Fix</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/restaurant-portal.css">
+</head>
+<body class="restaurant-portal">
+    <header>
+        <nav class="navbar">
+            <img src="../images/logo.jpg" alt="Logo">
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="login.html">Restaurant Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="restaurant-auth-page">
+        <div class="restaurant-auth-container">
+            <h1>Register Your Restaurant</h1>
+            <form class="restaurant-auth-form" id="restaurantRegisterForm">
+                <input type="text" placeholder="Restaurant Name" required>
+                <input type="text" placeholder="Owner Name" required>
+                <input type="email" placeholder="Business Email" required>
+                <input type="tel" placeholder="Contact Number" required>
+                <textarea placeholder="Restaurant Address" required></textarea>
+                <select name="cuisineType" required>
+                    <option value="">Select Cuisine Type</option>
+                    <option value="italian">Italian</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="indian">Indian</option>
+                    <option value="mexican">Mexican</option>
+                </select>
+                <div class="time-slots">
+                    <label>Operating Hours:</label>
+                    <input type="time" placeholder="Opening Time" required>
+                    <input type="time" placeholder="Closing Time" required>
+                </div>
+                <div class="document-upload">
+                    <label>Business Documents:</label>
+                    <input type="file" accept=".pdf,.jpg,.png" multiple required>
+                </div>
+                <input type="password" placeholder="Create Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Register Restaurant</button>
+                <p class="auth-link">Already registered? <a href="login.html">Login here</a></p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Foodie Fix. All rights reserved.</p>
+    </footer>
+</body>
+</html>

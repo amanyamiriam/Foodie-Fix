@@ -152,3 +152,29 @@ function viewRestaurant(id) {
     // Implement restaurant view functionality
     console.log(`Viewing restaurant ${id}`);
 }
+
+// Add this to your existing main.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize AI services
+    const ai = new AIServices();
+
+    // Setup chatbot
+    const chatbotToggle = document.createElement('button');
+    chatbotToggle.className = 'chatbot-toggle';
+    chatbotToggle.innerHTML = '💬';
+    document.body.appendChild(chatbotToggle);
+
+    chatbotToggle.addEventListener('click', () => {
+        document.getElementById('chatbot').classList.toggle('hidden');
+    });
+
+    // Load personalized recommendations
+    if (currentUser) {
+        ai.recommendationEngine.getPersonalizedRecommendations(currentUser.id);
+    }
+
+    // Initialize route optimization for delivery partners
+    if (currentUser?.type === 'delivery') {
+        ai.routeOptimizer.optimizeDeliveryRoute(activeDeliveries);
+    }
+});

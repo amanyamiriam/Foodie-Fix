@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Foodie Fix</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-portal">
+    <header>
+        <nav class="navbar">
+            <img src="../images/logo.jpg" alt="Logo">
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="admin-dashboard">
+        <section class="user-management">
+            <h2>User Management</h2>
+            <div id="usersList"></div>
+        </section>
+
+        <section class="promotion-management">
+            <h2>Promotions</h2>
+            <div id="promotionsList"></div>
+            <button id="addPromotion">Add New Promotion</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Foodie Fix. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+    "version": "1.0.0",
+    "name": "Foodie Fix",
+    "environment": {
+        "development": {
+            "apiUrl": "http://localhost:3000/api",
+            "stripeKey": "YOUR_STRIPE_TEST_KEY",
+            "googleMapsKey": "YOUR_GOOGLE_MAPS_KEY"
+        },
+        "production": {
+            "apiUrl": "https://api.foodiefix.com",
+            "stripeKey": "YOUR_STRIPE_LIVE_KEY",
+            "googleMapsKey": "YOUR_GOOGLE_MAPS_KEY"
+        }
+    },
+    "features": {
+        "authentication": true,
+        "payments": true,
+        "realTimeTracking": true,
+        "aiRecommendations": true,
+        "chatbot": true
+    }
+}
