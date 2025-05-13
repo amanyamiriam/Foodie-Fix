@@ -3,150 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuisines - Foodie Fix</title>
+    <title>Explore World Cuisines - Foodie Fix</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cuisines.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <img src="images/logo.jpg" alt="Logo">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Foodie Fix Logo">
+                <span>Foodie Fix</span>
+            </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="restaurants.html">Restaurants</a>
                 <a href="cuisines.html" class="active">Cuisines</a>
                 <div class="auth-links" id="authLinks">
-                    <a href="login.html" id="loginBtn">Login</a>
-                    <a href="register.html" id="registerBtn">Register</a>
+                    <a href="login.html" id="loginBtn" class="btn-primary">Login</a>
+                    <a href="register.html" id="registerBtn" class="btn-secondary">Register</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <main class="cuisines-page">
-        <h1>Explore Cuisines</h1>
-        <div class="cuisines-grid" id="cuisinesGrid">
-            <div class="cuisine-card">
-                <img src="images/cuisines/italian.jpg" alt="Italian Cuisine">
+        <section class="hero-section">
+            <h1>Explore World Cuisines</h1>
+            <p>Discover authentic flavors from around the globe</p>
+            <div class="search-container">
+                <input type="text" id="cuisineSearch" placeholder="Search cuisines...">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </section>
+
+        <section class="filters-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Cuisines</button>
+                <button class="filter-btn" data-filter="asian">Asian</button>
+                <button class="filter-btn" data-filter="european">European</button>
+                <button class="filter-btn" data-filter="american">American</button>
+                <button class="filter-btn" data-filter="african">African</button>
+            </div>
+        </section>
+
+        <section class="cuisines-grid" id="cuisinesGrid">
+            <!-- Italian -->
+            <div class="cuisine-card" data-category="european">
+                <div class="cuisine-image">
+                    <img src="images/cuisines/italian.jpg" alt="Italian Cuisine">
+                    <div class="cuisine-overlay">
+                        <button class="explore-btn">Explore Italian Restaurants</button>
+                    </div>
+                </div>
                 <div class="cuisine-info">
-                    <h3>Italian</h3>
-                    <p>Pizza, Pasta, Risotto</p>
-                    <span class="restaurant-count">15 Restaurants</span>
+                    <h3>Italian <span class="cuisine-tag">European</span></h3>
+                    <p>Experience authentic Italian flavors</p>
+                    <div class="cuisine-details">
+                        <span><i class="fas fa-utensils"></i> 15 Restaurants</span>
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                    </div>
+                    <div class="popular-dishes">
+                        <span>Pizza</span>
+                        <span>Pasta</span>
+                        <span>Risotto</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="cuisine-card">
-                <img src="images/cuisines/chinese.jpg" alt="Chinese Cuisine">
+            <!-- Chinese -->
+            <div class="cuisine-card" data-category="asian">
+                <div class="cuisine-image">
+                    <img src="images/cuisines/chinese.jpg" alt="Chinese Cuisine">
+                    <div class="cuisine-overlay">
+                        <button class="explore-btn">Explore Chinese Restaurants</button>
+                    </div>
+                </div>
                 <div class="cuisine-info">
-                    <h3>Chinese</h3>
-                    <p>Dim Sum, Noodles, Dumplings</p>
-                    <span class="restaurant-count">12 Restaurants</span>
+                    <h3>Chinese <span class="cuisine-tag">Asian</span></h3>
+                    <p>Authentic Chinese delicacies</p>
+                    <div class="cuisine-details">
+                        <span><i class="fas fa-utensils"></i> 12 Restaurants</span>
+                        <span><i class="fas fa-star"></i> 4.7</span>
+                    </div>
+                    <div class="popular-dishes">
+                        <span>Dim Sum</span>
+                        <span>Noodles</span>
+                        <span>Dumplings</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="cuisine-card">
-                <img src="images/cuisines/indian.jpg" alt="Indian Cuisine">
+            <!-- Indian -->
+            <div class="cuisine-card" data-category="asian">
+                <div class="cuisine-image">
+                    <img src="images/cuisines/indian.jpg" alt="Indian Cuisine">
+                    <div class="cuisine-overlay">
+                        <button class="explore-btn">Explore Indian Restaurants</button>
+                    </div>
+                </div>
                 <div class="cuisine-info">
-                    <h3>Indian</h3>
-                    <p>Curry, Biryani, Tandoor</p>
-                    <span class="restaurant-count">10 Restaurants</span>
+                    <h3>Indian <span class="cuisine-tag">Asian</span></h3>
+                    <p>Rich and spicy Indian flavors</p>
+                    <div class="cuisine-details">
+                        <span><i class="fas fa-utensils"></i> 10 Restaurants</span>
+                        <span><i class="fas fa-star"></i> 4.6</span>
+                    </div>
+                    <div class="popular-dishes">
+                        <span>Curry</span>
+                        <span>Biryani</span>
+                        <span>Tandoori</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="cuisine-card">
-                <img src="images/cuisines/mexican.jpg" alt="Mexican Cuisine">
+            <!-- Mexican -->
+            <div class="cuisine-card" data-category="american">
+                <div class="cuisine-image">
+                    <img src="images/cuisines/mexican.jpg" alt="Mexican Cuisine">
+                    <div class="cuisine-overlay">
+                        <button class="explore-btn">Explore Mexican Restaurants</button>
+                    </div>
+                </div>
                 <div class="cuisine-info">
-                    <h3>Mexican</h3>
-                    <p>Tacos, Burritos, Quesadillas</p>
-                    <span class="restaurant-count">8 Restaurants</span>
+                    <h3>Mexican <span class="cuisine-tag">American</span></h3>
+                    <p>Vibrant Mexican street food</p>
+                    <div class="cuisine-details">
+                        <span><i class="fas fa-utensils"></i> 8 Restaurants</span>
+                        <span><i class="fas fa-star"></i> 4.5</span>
+                    </div>
+                    <div class="popular-dishes">
+                        <span>Tacos</span>
+                        <span>Burritos</span>
+                        <span>Enchiladas</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="cuisine-card">
-                <img src="images/cuisines/japanese.jpg" alt="Japanese Cuisine">
+            <!-- Japanese -->
+            <div class="cuisine-card" data-category="asian">
+                <div class="cuisine-image">
+                    <img src="images/cuisines/japanese.jpg" alt="Japanese Cuisine">
+                    <div class="cuisine-overlay">
+                        <button class="explore-btn">Explore Japanese Restaurants</button>
+                    </div>
+                </div>
                 <div class="cuisine-info">
-                    <h3>Japanese</h3>
-                    <p>Sushi, Ramen, Tempura</p>
-                    <span class="restaurant-count">9 Restaurants</span>
+                    <h3>Japanese <span class="cuisine-tag">Asian</span></h3>
+                    <p>Traditional Japanese delights</p>
+                    <div class="cuisine-details">
+                        <span><i class="fas fa-utensils"></i> 9 Restaurants</span>
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                    <div class="popular-dishes">
+                        <span>Sushi</span>
+                        <span>Ramen</span>
+                        <span>Tempura</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="cuisine-card">
-                <img src="images/cuisines/thai.jpg" alt="Thai Cuisine">
+            <!-- Mediterranean -->
+            <div class="cuisine-card" data-category="european">
+                <div class="cuisine-image">
+                    <img src="images/cuisines/mediterranean.jpg" alt="Mediterranean Cuisine">
+                    <div class="cuisine-overlay">
+                        <button class="explore-btn">Explore Mediterranean Restaurants</button>
+                    </div>
+                </div>
                 <div class="cuisine-info">
-                    <h3>Thai</h3>
-                    <p>Pad Thai, Curry, Spring Rolls</p>
-                    <span class="restaurant-count">7 Restaurants</span>
+                    <h3>Mediterranean <span class="cuisine-tag">European</span></h3>
+                    <p>Healthy Mediterranean dishes</p>
+                    <div class="cuisine-details">
+                        <span><i class="fas fa-utensils"></i> 7 Restaurants</span>
+                        <span><i class="fas fa-star"></i> 4.7</span>
+                    </div>
+                    <div class="popular-dishes">
+                        <span>Hummus</span>
+                        <span>Falafel</span>
+                        <span>Shawarma</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <h2>Featured Collections</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <img src="images/collections/street-food.jpg" alt="Street Food">
+                    <h3>Street Food Specials</h3>
+                </div>
+                <div class="featured-card">
+                    <img src="images/collections/healthy.jpg" alt="Healthy Options">
+                    <h3>Healthy Choices</h3>
+                </div>
+                <div class="featured-card">
+                    <img src="images/collections/desserts.jpg" alt="Desserts">
+                    <h3>Sweet Cravings</h3>
+                </div>
+                <div class="featured-card">
+                    <img src="images/collections/seafood.jpg" alt="Seafood">
+                    <h3>Fresh Seafood</h3>
+                </div>
+                <div class="featured-card">
+                    <img src="images/collections/vegan.jpg" alt="Vegan">
+                    <h3>Vegan Delights</h3>
+                </div>
+                <div class="featured-card">
+                    <img src="images/collections/bbq.jpg" alt="BBQ">
+                    <h3>BBQ & Grills</h3>
+                </div>
+                <div class="featured-card">
+                    <img src="images/collections/breakfast.jpg" alt="Breakfast">
+                    <h3>Breakfast Favorites</h3>
+                </div>
+                <div class="featured-card">
+                    <img src="images/collections/drinks.jpg" alt="Beverages">
+                    <h3>Refreshing Beverages</h3>
+                </div>
+                <div class="featured-card">
+                    <img src="images/collections/spicy.jpg" alt="Spicy Food">
+                    <h3>Spicy Specials</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section company-info">
+                <div class="footer-logo">
+                    <img src="images/logo.jpg" alt="Foodie Fix Logo">
+                    <h4>Foodie Fix</h4>
+                </div>
+                <p>Your ultimate destination for discovering and ordering delicious cuisines from around the world.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
 
-            <div class="cuisine-card">
-                <img src="images/cuisines/mediterranean.jpg" alt="Mediterranean Cuisine">
-                <div class="cuisine-info">
-                    <h3>Mediterranean</h3>
-                    <p>Hummus, Falafel, Shawarma</p>
-                    <span class="restaurant-count">6 Restaurants</span>
-                </div>
+            <div class="footer-section quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="cuisines.html">Cuisines</a></li>
+                    <li><a href="offers.html">Special Offers</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
             </div>
 
-            <div class="cuisine-card">
-                <img src="images/cuisines/korean.jpg" alt="Korean Cuisine">
-                <div class="cuisine-info">
-                    <h3>Korean</h3>
-                    <p>Bibimbap, Kimchi, Korean BBQ</p>
-                    <span class="restaurant-count">8 Restaurants</span>
-                </div>
+            <div class="footer-section help-support">
+                <h4>Help & Support</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="delivery.html">Delivery Information</a></li>
+                </ul>
             </div>
 
-            <div class="cuisine-card">
-                <img src="images/cuisines/french.jpg" alt="French Cuisine">
-                <div class="cuisine-info">
-                    <h3>French</h3>
-                    <p>Croissants, Coq au Vin, Ratatouille</p>
-                    <span class="restaurant-count">5 Restaurants</span>
-                </div>
-            </div>
-
-            <div class="cuisine-card">
-                <img src="images/cuisines/vietnamese.jpg" alt="Vietnamese Cuisine">
-                <div class="cuisine-info">
-                    <h3>Vietnamese</h3>
-                    <p>Pho, Banh Mi, Spring Rolls</p>
-                    <span class="restaurant-count">6 Restaurants</span>
-                </div>
-            </div>
-
-            <div class="cuisine-card">
-                <img src="images/cuisines/greek.jpg" alt="Greek Cuisine">
-                <div class="cuisine-info">
-                    <h3>Greek</h3>
-                    <p>Souvlaki, Moussaka, Gyros</p>
-                    <span class="restaurant-count">4 Restaurants</span>
-                </div>
-            </div>
-
-            <div class="cuisine-card">
-                <img src="images/cuisines/spanish.jpg" alt="Spanish Cuisine">
-                <div class="cuisine-info">
-                    <h3>Spanish</h3>
-                    <p>Paella, Tapas, Gazpacho</p>
-                    <span class="restaurant-count">5 Restaurants</span>
-                </div>
-            </div>
-
-            <div class="cuisine-card">
-                <img src="images/cuisines/brazilian.jpg" alt="Brazilian Cuisine">
-                <div class="cuisine-info">
-                    <h3>Brazilian</h3>
-                    <p>Feijoada, Pão de Queijo, Churrasco</p>
-                    <span class="restaurant-count">3 Restaurants</span>
+            <div class="footer-section newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to receive special offers and updates</p>
+                <form class="newsletter-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                    </div>
+                </form>
+                <div class="app-downloads">
+                    <h5>Download Our App</h5>
+                    <div class="store-buttons">
+                        <a href="#" class="app-store"><img src="images/app-store.png" alt="App Store"></a>
+                        <a href="#" class="play-store"><img src="images/play-store.png" alt="Play Store"></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 Foodie Fix. All rights reserved.</p>
+        <div class="footer-bottom">
+            <div class="footer-info">
+                <p>&copy; 2025 Foodie Fix. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="terms.html">Terms</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="cookies.html">Cookies</a>
+                </div>
+            </div>
+            <div class="payment-methods">
+                <span>Payment Methods:</span>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <div class="mpesa-payment">
+                    <img src="images/mpesa-logo.png" alt="M-Pesa" title="M-Pesa">
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="js/cuisines.js"></script>

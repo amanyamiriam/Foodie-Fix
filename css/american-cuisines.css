@@ -1,0 +1,68 @@
+/* American Cuisines Specific Styles */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                url('../images/american-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.category-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+}
+
+.explore-button {
+    background: #E63946;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+    background: #DC2F3D;
+    transform: translateX(5px);
+}
+
+.dish-card {
+    border: 1px solid #eee;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.price {
+    color: #E63946;
+    font-weight: bold;
+}
+
+/* Slider Controls */
+.slider-controls button {
+    background: #E63946;
+    color: white;
+}
+
+.slider-controls button:hover {
+    background: #DC2F3D;
+}

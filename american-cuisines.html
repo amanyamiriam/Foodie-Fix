@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Cuisines - Foodie Fix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/american-cuisines.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Foodie Fix Logo">
+                <span>Foodie Fix</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="restaurants.html">Restaurants</a>
+                <a href="cuisines.html">Cuisines</a>
+                <a href="american-cuisines.html" class="active">American Cuisines</a>
+                <div class="auth-links" id="authLinks">
+                    <a href="login.html" id="loginBtn" class="btn-primary">Login</a>
+                    <a href="register.html" id="registerBtn" class="btn-secondary">Register</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="american-cuisines-page">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>American Food Adventure</h1>
+                <p>From classic comfort food to modern fusion dishes</p>
+            </div>
+        </section>
+
+        <section class="cuisine-categories">
+            <div class="category-grid">
+                <div class="category-card bbq">
+                    <div class="category-image">
+                        <img src="images/cuisines/bbq.jpg" alt="BBQ">
+                    </div>
+                    <div class="category-content">
+                        <h2>BBQ & Grills</h2>
+                        <p>Authentic American barbecue and smoky flavors</p>
+                        <div class="popular-items">
+                            <span>Ribs</span>
+                            <span>Brisket</span>
+                            <span>Pulled Pork</span>
+                        </div>
+                        <a href="#" class="explore-button">Explore BBQ Joints</a>
+                    </div>
+                </div>
+
+                <div class="category-card burgers">
+                    <div class="category-image">
+                        <img src="images/cuisines/burgers.jpg" alt="Burgers">
+                    </div>
+                    <div class="category-content">
+                        <h2>Gourmet Burgers</h2>
+                        <p>Classic and creative burger combinations</p>
+                        <div class="popular-items">
+                            <span>Cheeseburger</span>
+                            <span>Bacon Burger</span>
+                            <span>Veggie Burger</span>
+                        </div>
+                        <a href="#" class="explore-button">Find Burger Spots</a>
+                    </div>
+                </div>
+
+                <div class="category-card tex-mex">
+                    <div class="category-image">
+                        <img src="images/cuisines/tex-mex.jpg" alt="Tex-Mex">
+                    </div>
+                    <div class="category-content">
+                        <h2>Tex-Mex</h2>
+                        <p>Bold flavors of Texas and Mexican fusion</p>
+                        <div class="popular-items">
+                            <span>Fajitas</span>
+                            <span>Nachos</span>
+                            <span>Quesadillas</span>
+                        </div>
+                        <a href="#" class="explore-button">Discover Tex-Mex</a>
+                    </div>
+                </div>
+
+                <div class="category-card soul-food">
+                    <div class="category-image">
+                        <img src="images/cuisines/soul-food.jpg" alt="Soul Food">
+                    </div>
+                    <div class="category-content">
+                        <h2>Soul Food</h2>
+                        <p>Southern comfort food with heart and soul</p>
+                        <div class="popular-items">
+                            <span>Fried Chicken</span>
+                            <span>Mac & Cheese</span>
+                            <span>Cornbread</span>
+                        </div>
+                        <a href="#" class="explore-button">Find Soul Food</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-dishes">
+            <h2>Popular American Dishes</h2>
+            <div class="dishes-slider">
+                <!-- Featured Dishes -->
+                <div class="dish-card">
+                    <img src="images/dishes/smoked-brisket.jpg" alt="Smoked Brisket">
+                    <div class="dish-info">
+                        <h3>Texas Smoked Brisket</h3>
+                        <p>Slow-smoked for 12 hours</p>
+                        <div class="dish-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9 (2.8k reviews)</span>
+                        </div>
+                        <span class="price">$24.99</span>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <img src="images/dishes/mac-cheese.jpg" alt="Mac & Cheese">
+                    <div class="dish-info">
+                        <h3>Gourmet Mac & Cheese</h3>
+                        <p>Creamy blend of premium cheeses</p>
+                        <div class="dish-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.7 (1.9k reviews)</span>
+                        </div>
+                        <span class="price">$15.99</span>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <img src="images/dishes/classic-burger.jpg" alt="Classic Burger">
+                    <div class="dish-info">
+                        <h3>All-American Burger</h3>
+                        <p>Premium beef with all the fixings</p>
+                        <div class="dish-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8 (3.1k reviews)</span>
+                        </div>
+                        <span class="price">$16.99</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
