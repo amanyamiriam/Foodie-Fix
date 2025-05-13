@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
     email: {
         type: String,
         required: true,
@@ -11,25 +14,39 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    role: {
+    phone: {
+        type: String,
+        required: true
+    },
+    address: {
+        type: String,
+        required: true
+    },
+    userType: {
         type: String,
         enum: ['customer', 'restaurant', 'delivery'],
-        default: 'customer'
+        required: true
     },
-    name: String,
-    phone: String,
-    address: String,
-    createdAt: {
-        type: Date,
-        default: Date.now
-    }
-});
+    active: {
+        type: Boolean,
+        default: true
+    },
+    profileImage: {
+        type: String,
+        default: ''
+    },
+    orders: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Order'
+    }],
+    reviews: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Review'
+    }],
+    favorites: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Restaurant'
+    }]
+}, { timestamps: true });
 
-userSchema.pre('save', async function(next) {
-    if (this.isModified('password')) {
-        this.password = await bcrypt.hash(this.password, 10);
-    }
-    next();
-});
-
-module.exports = mongoose.model('User', 'userSchema');
+module.exports = mongoose.model('User', userSchema);

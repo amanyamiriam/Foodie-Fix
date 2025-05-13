@@ -52,3 +52,45 @@ class AuthManager {
 }
 
 const authManager = new AuthManager();
+
+// Login form handler
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    try {
+        const response = await this.loginUser(Object.fromEntries(formData));
+        if (response.ok) {
+            const data = await response.json();
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('userType', data.userType);
+            
+            // Redirect to home page
+            window.location.href = 'index.html';
+        }
+    } catch (error) {
+        console.error('Login error:', error);
+    }
+});
+
+// Registration form handler
+document.getElementById('registerForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    try {
+        const response = await this.loginUser(Object.fromEntries(formData));
+        if (response.ok) {
+            const data = await response.json();
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('userType', data.userType);
+            
+            // Redirect to home page
+            window.location.href = 'index.html';
+        }
+    } catch (error) {
+        console.error('Registration error:', error);
+    }
+});
+
+// Close modal after successful auth
+function closeAuthModal() {
+    document.getElementById('loginModal').classList.add('hidden');
+    document.getElementById('registerModal').classList.add('hidden');
+}
